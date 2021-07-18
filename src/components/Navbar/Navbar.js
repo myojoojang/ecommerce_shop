@@ -3,19 +3,19 @@ import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '
 import { ShoppingCart } from '@material-ui/icons'
 import useStyles from './styles';
 
-const Navbar = () => {
+const Navbar = ({ totalItems }) => {
   const classes = useStyles()
   return (
     <>
       <AppBar position="fixed" className={classes.appBar} color="inherit">
         <Toolbar>
-          <Typography>
+          <Typography className={classes.title}>
             LOGO HERE
           </Typography>
           <div className={classes.grow} />
           <div className={classes.button}>
             <IconButton area-label="Show cart item" >
-              <Badge badgeContent={2} color="secondary">
+              <Badge badgeContent={totalItems} color="primary">
                 <ShoppingCart className={classes.buttonIcon} />
               </Badge>
             </IconButton>

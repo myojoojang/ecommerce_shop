@@ -17,6 +17,8 @@ export default makeStyles((theme) => ({
     alignItems: 'flex',
     display: 'flex',
     textDecoration: 'none',
+    marginLeft: '10px',
+    fontWeight: 700
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -29,11 +31,14 @@ export default makeStyles((theme) => ({
   },
   button: {
     backgroundColor: "black",
-    borderRadius: '50%'
+    borderRadius: '50%',
+    transition: "0.3s ease-out",
   },
 
   buttonIcon: {
-    color: 'white'
+    color: 'white',
+
+
   },
 
   search: {

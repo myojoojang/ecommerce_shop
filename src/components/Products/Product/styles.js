@@ -4,17 +4,28 @@ export default makeStyles(() => ({
 
   root: {
     maxWidth: '100%',
+    height: '100%',
     boxShadow: "10px 10px 0px -1px #000000",
     border: "black solid 3px",
     borderRadius: "0"
   },
+  name: {
+    fontWeight: 700,
+    textTransform: 'lowercase',
+    fontSize: '20px',
+  },
+  price: {
+    fontSize: '16px',
+    textTransform: 'lowercase',
+  },
   media: {
-    height: 0,
-    paddingTop: "56.25%",
+    height: "50vh",
+    width: "100%",
+    objectFit: 'cover',
+
   },
   cardActions: {
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
     background: "black",
     padding: "0",
     border: "2px white solid",
@@ -33,6 +44,7 @@ export default makeStyles(() => ({
     '&:hover': {
       color: "black"
     },
+    padding: '10px'
   },
 
   cardContent: {
