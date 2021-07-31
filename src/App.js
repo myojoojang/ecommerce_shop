@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import { Products, Navbar, Cart } from './components'
+import { Products, Navbar, Cart, Checkout } from './components'
 import { commerce } from './lib/commerce'
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Roboto',
+      'Arial',
+      'sans-serif',
+
+    ].join(','),
+  },
   palette: {
     primary: {
       main: "#00ff00"
@@ -25,9 +35,25 @@ const App = () => {
   const initCart = async () => {
     setCart(await commerce.cart.retrieve())
   }
+
   const actionAddtoCart = async (id, qt) => {
-    const item = await commerce.cart.add(id, qt)
-    setCart(item.cart)
+    const { cart } = await commerce.cart.add(id, qt)
+    setCart(cart)
+  }
+
+  const actionUpdateCartQty = async (id, qt) => {
+    const res = await commerce.cart.update(id, { quantity: qt })
+    setCart(res.cart)
+  }
+
+  const actionDeleteItemIncart = async (id) => {
+    const res = await commerce.cart.remove(id)
+    setCart(res.cart)
+  }
+
+  const actionEmptyCart = async () => {
+    const res = await commerce.cart.empty()
+    setCart(res.cart)
   }
 
   useEffect(() => {
@@ -37,14 +63,37 @@ const App = () => {
 
   console.log(cart)
   return (
-    <ThemeProvider theme={theme}>
-      <div>
-        <Navbar totalItems={cart.total_items} />
-        <Products products={products} onAddToCart={actionAddtoCart} />
+    <Router>
+      <ThemeProvider theme={theme}>
+        <div>
+          <Navbar totalItems={cart.total_items} />
+          <Switch>
+            <Route exact path="/">
+              this is homepage
+            </Route>
+            <Route exact path="/products">
+              <Products products={products} onAddToCart={actionAddtoCart} />
+            </Route>
+            <Route exact path="/cart">
+              {cart.id
+                ? <Cart
+                  cart={cart}
+                  actionUpdateCartQty={actionUpdateCartQty}
+                  actionDeleteItemIncart={actionDeleteItemIncart}
+                  actionEmptyCart={actionEmptyCart}
+                />
+                : null}
 
-        {cart.id ? <Cart cart={cart} /> : null}
-      </div>
-    </ThemeProvider>
+            </Route>
+            <Route exact path='/checkout'>
+              <Checkout />
+
+            </Route>
+          </Switch>
+
+        </div>
+      </ThemeProvider>
+    </Router>
   )
 }
 

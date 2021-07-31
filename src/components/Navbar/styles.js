@@ -4,6 +4,7 @@ const drawerWidth = 0
 
 export default makeStyles((theme) => ({
   appBar: {
+    fontFamily: 'Roboto',
     boxShadow: 'none',
     borderBottom: '3px solid black',
     [theme.breakpoints.up('sm')]: {
@@ -14,12 +15,31 @@ export default makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    alignItems: 'flex',
     display: 'flex',
     textDecoration: 'none',
     marginLeft: '10px',
-    fontWeight: 700
+    fontWeight: 700,
+    color: 'black',
   },
+  link: {
+    flexGrow: 1,
+    cursor: 'pointer',
+    fontWeight: 500,
+    textDecoration: 'none',
+    color: 'black',
+    margin: '10px',
+    transition: "0.3s ease-out",
+    '&:hover': {
+      color: "#00ff00",
+    },
+  },
+
+  flex: {
+
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
+
   menuButton: {
     marginRight: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
