@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, CardMedia, CardContent, CardActions, Typography, Button } from '@material-ui/core'
-import { AddShoppingCart, ClassRounded } from '@material-ui/icons'
+// import { AddShoppingCart, ClassRounded } from '@material-ui/icons'
 
 import useStyles from './styles'
 
