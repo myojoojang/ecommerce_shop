@@ -68,9 +68,7 @@ const ShippingForm = ({ checkoutToken, next }) => {
         <form onSubmit={methods.handleSubmit((data) => next({ ...data, selCountry, selProvince, selShippingOption }))}>
           <Grid container spacing={3}>
             <CustomInputForm required name="email" label="Email" />
-
             <CustomInputForm required name="firstName" label="First Name" />
-
             <CustomInputForm required name="lastName" label="Last Name" />
             <CustomInputForm required name="address" label="Address" />
             <CustomInputForm required name="city" label="City" />

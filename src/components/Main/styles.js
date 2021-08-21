@@ -18,8 +18,7 @@ export const MainContainer = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.2)0%, rgba(0,0,0,0.3)100%),
-    linear-gradient(180deg, rgba(0,0,0,0.2)0%, transparent 100%);
+    background: rgba(0,0,0,0.3)0%;
     z-index:2;
   } 
 `
@@ -44,10 +43,10 @@ export const VideoBg = styled.video`
 `
 
 export const MainContent = styled.div`
+  margin-top: 100px;
   z-index:3;
-  max-width: 1200px;
+  max-width: 800px;
   position: absolute;
-  padding: 8px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,12 +54,11 @@ export const MainContent = styled.div`
 
 export const MainH1 = styled.h1`
   color: white;
-  font-size: 48px;
+  font-size: 56px;
   text-align: center;
   @media screen and (max-width:768px){
     font-size: 40px;
   }
-
   
   @media screen and (max-width:480px){
     font-size: 32px;
@@ -68,25 +66,25 @@ export const MainH1 = styled.h1`
 `
 
 
-export const MainP = styled.p`
-  margin-top: 24px;
-  color: white;
-  font-size: 24px;
-  text-align: center;
-  max-width: 600px;
-
-  @media screen and (max-width:768px){
-    font-size: 24px;
-  }
-
-  @media screen and (max-width:480px){
-    font-size: 18px;
-  }
-`
 
 export const MainBtnWrapper = styled.div`
-  margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+export const MainButton = styled.button`
+  border-radius: 0;
+  border: none;
+  width: 220px;
+  height: 50px;
+  font-size: 18px;
+  box-shadow: none;
+  color: black;
+  transition: 0.3s ease-out;
+  background-color: #00ff00;
+    :hover{
+      color: white;
+      background-color: black;
+    }
+
 `

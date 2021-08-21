@@ -35,7 +35,6 @@ export default makeStyles((theme) => ({
   },
 
   flex: {
-
     display: 'flex',
     flexWrap: 'wrap'
   },

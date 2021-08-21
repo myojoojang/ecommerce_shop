@@ -1,32 +1,23 @@
-import React, { useState } from 'react';
-import { MainBg, MainContainer, VideoBg, MainContent, MainBtnWrapper, MainH1, MainP } from './styles'
-import { Button } from '@material-ui/core'
+import React from 'react';
+import { MainBg, MainContainer, VideoBg, MainContent, MainBtnWrapper, MainH1, MainButton } from './styles'
+
 import Video from '../../videos/main.mp4';
 
 const Main = () => {
-  const [hover, setHover] = useState(false)
-  const onHover = () => {
-    setHover(!hover)
-  }
   return (
-    <MainContainer >
+    <MainContainer>
       <MainBg>
-
         <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
       </MainBg>
       <MainContent>
         <MainH1>
           text whatever you think it would be fit
         </MainH1>
-        <MainP>
-          Sign up for a new account today
-        </MainP>
+
         <MainBtnWrapper>
-          <Button
-            color="primary"
-          >
-            Create an Account {hover ? '->' : '>'}
-          </Button>
+          <MainButton >
+            Create an Account
+          </MainButton>
         </MainBtnWrapper>
       </MainContent>
     </MainContainer>
