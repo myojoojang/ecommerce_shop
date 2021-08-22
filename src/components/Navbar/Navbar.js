@@ -11,11 +11,14 @@ const Navbar = ({ totalItems }) => {
     <>
       <AppBar position="fixed" className={classes.appBar} color="inherit">
         <Toolbar>
-          <Typography component={Link} to="/" className={classes.title}>
-            LOGO HERE
-          </Typography>
-          <div className={classes.flex}>
-            <Typography component={Link} to="/products" className={classes.link}>
+          <div>
+            <Typography component={Link} to="/" className={classes.title}>
+              LOGO HERE
+            </Typography>
+          </div>
+          <div className={classes.grow} />
+          <div>
+            <Typography component={Link} to="/custom" className={classes.link}>
               Custom
             </Typography>
             <Typography component={Link} to="/products" className={classes.link}>
@@ -23,14 +26,12 @@ const Navbar = ({ totalItems }) => {
             </Typography>
           </div>
           <div className={classes.grow} />
-          <div className={classes.button}>
-
-            <IconButton component={Link} to="/cart" area-label="Show cart item" >
-              <Badge badgeContent={totalItems} color="primary">
+          <div>
+            <IconButton className={classes.button} component={Link} to="/cart" area-label="Show cart item" >
+              <Badge badgeContent={totalItems} color="primary" >
                 <ShoppingCart className={classes.buttonIcon} />
               </Badge>
             </IconButton>
-
           </div>
         </Toolbar>
       </AppBar>

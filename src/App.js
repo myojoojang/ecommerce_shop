@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Main, Products, Navbar, Cart, Checkout } from './components'
+import { Main, Products, Navbar, Cart, Checkout, Custom } from './components'
 import { commerce } from './lib/commerce'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -14,6 +14,7 @@ const theme = createMuiTheme({
 
     ].join(','),
   },
+
   palette: {
     primary: {
       main: "#00ff00"
@@ -25,6 +26,7 @@ const theme = createMuiTheme({
 })
 
 const App = () => {
+
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState({})
 
@@ -70,6 +72,9 @@ const App = () => {
           <Switch>
             <Route exact path="/">
               <Main />
+            </Route>
+            <Route exact path="/custom">
+              <Custom />
             </Route>
             <Route exact path="/products">
               <Products products={products} onAddToCart={actionAddtoCart} />

@@ -2,10 +2,8 @@ import { makeStyles } from "@material-ui/core"
 
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
-  title: {
-    margin: '20px',
-    textShadow: '#00ff00 5px 5px',
-    fontWeight: 700
+  center: {
+    textAlign: 'center',
   },
   cartDetails: {
     display: 'flex',
@@ -19,9 +17,7 @@ export default makeStyles((theme) => ({
     border: '3px solid black',
 
   },
-  center: {
-    textAlign: 'center'
-  },
+
 
   emptyButton: {
     borderRadius: '0',

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MainBg, MainContainer, VideoBg, MainContent, MainBtnWrapper, MainH1, MainButton } from './styles'
 
 import Video from '../../videos/main.mp4';
 
 const Main = () => {
+  useEffect(() => {
+    document.title = "NEONs ✨"
+  }, []);
   return (
     <MainContainer>
       <MainBg>

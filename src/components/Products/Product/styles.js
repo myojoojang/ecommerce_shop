@@ -5,9 +5,19 @@ export default makeStyles(() => ({
   root: {
     maxWidth: '100%',
     height: '100%',
+    padding: '5px',
+    marginTop: '10px',
     boxShadow: "10px 10px 0px -1px #000000",
     border: "black solid 3px",
-    borderRadius: "0"
+    borderRadius: "0",
+    transition: "0.2s ease-out",
+    display: 'flex',
+    flexDirection: 'column ',
+    justifyContent: 'space-between',
+    '&:hover': {
+      transform: "scale(1.02)",
+      // boxShadow: "10px 10px 0px -1px #ff40ff",
+    },
   },
   name: {
     fontWeight: 700,
@@ -25,14 +35,11 @@ export default makeStyles(() => ({
 
   },
   cardActions: {
-    display: "flex",
+    padding: '0',
     background: "black",
-    padding: "0",
-    border: "2px white solid",
     transition: "0.3s ease-out",
     '&:hover': {
       background: "#00ff00",
-      boxShadow: "0 0 0 2px black inset",
     },
   },
   button: {

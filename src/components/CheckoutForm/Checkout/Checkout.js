@@ -6,6 +6,7 @@ import useStyles from './styles'
 import ShippingForm from '../ShippingForm';
 import PaymentForm from '../PaymentForm';
 import Confirm from '../Confirm';
+import Title from '../../Title/Title';
 
 import { commerce } from '../../../lib/commerce';
 
@@ -56,9 +57,11 @@ const Checkout = ({ cart }) => {
   return (
     <>
       <div className={classes.toolbar} />
+
       <main className={classes.layout}>
         <Paper className={classes.paper}>
-          <Typography variant="h4" align="center">Checkout</Typography>
+          <Title title={'Checkout'} />
+
           <Stepper activeStep={currentStep} className={classes.stepper}>
             {steps.map((step) => (
               <Step key={step}>

@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
   appBar: {
     fontFamily: 'Roboto',
     boxShadow: 'none',
+    display: 'flex',
     borderBottom: '3px solid black',
     [theme.breakpoints.up('sm')]: {
       width: `calc(100%-${drawerWidth}px)`,
@@ -14,30 +15,21 @@ export default makeStyles((theme) => ({
 
   },
   title: {
-    flexGrow: 1,
-    display: 'flex',
     textDecoration: 'none',
-    marginLeft: '10px',
     fontWeight: 700,
     color: 'black',
   },
   link: {
-    flexGrow: 1,
     cursor: 'pointer',
-    fontWeight: 500,
     textDecoration: 'none',
     color: 'black',
-    margin: '10px',
+    marginLeft: '20px',
     transition: "0.3s ease-out",
     '&:hover': {
       color: "#00ff00",
     },
   },
 
-  flex: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  },
 
   menuButton: {
     marginRight: theme.spacing(2),
@@ -46,19 +38,19 @@ export default makeStyles((theme) => ({
     }
   },
   grow: {
-    flexGrow: 1,
+    width: '100%'
   },
   button: {
     backgroundColor: "black",
     borderRadius: '50%',
-    transition: "0.3s ease-out",
-  },
-
-  buttonIcon: {
     color: 'white',
-
-
+    transition: "0.3s ease-out",
+    '&:hover': {
+      background: "#ff40ff",
+      color: 'black',
+    },
   },
+
 
   search: {
     position: 'relative',

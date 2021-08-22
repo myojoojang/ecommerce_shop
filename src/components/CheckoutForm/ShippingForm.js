@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import CustomInputForm from './CustomInputForm';
 import { commerce } from '../../lib/commerce';
+// import Title from '../Title/Title';
 
 const ShippingForm = ({ checkoutToken, next }) => {
   const methods = useForm()
@@ -60,10 +61,8 @@ const ShippingForm = ({ checkoutToken, next }) => {
 
   return (
     <>
-      <Typography variant="h6" gutterBottom>
-        Shipping Address
 
-      </Typography>
+
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit((data) => next({ ...data, selCountry, selProvince, selShippingOption }))}>
           <Grid container spacing={3}>
@@ -120,9 +119,8 @@ const ShippingForm = ({ checkoutToken, next }) => {
           <br />
 
           <div style={{ textAlign: 'right' }}>
-            <Button component={Link} to='/cart' color='secondary'>Cancel Checkout</Button>
-            <Button type='submit' color='primary'>Next</Button>
-
+            <Button component={Link} to='/cart'>Cancel Checkout</Button>
+            <Button type='submit' color='black' style={{ background: '#00ff00', borderRadius: 0, marginLeft: '10px' }}>Next</Button>
           </div>
         </form>
       </FormProvider>

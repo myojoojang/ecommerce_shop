@@ -78,13 +78,15 @@ export const MainButton = styled.button`
   width: 220px;
   height: 50px;
   font-size: 18px;
-  box-shadow: none;
   color: black;
+  box-shadow: 10px 10px 0px -1px #000000;
   transition: 0.3s ease-out;
   background-color: #00ff00;
     :hover{
-      color: white;
+      color: #00ff00;
       background-color: black;
+      box-shadow: 10px 10px 0px -1px #00ff00;
+
     }
 
 `
