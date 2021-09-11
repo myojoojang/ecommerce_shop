@@ -51,7 +51,7 @@ const Checkout = ({ cart }) => {
   const Form = () => (
     currentStep === 0
       ? <ShippingForm checkoutToken={checkoutToken} next={next} />
-      : <PaymentForm shippingData={shippingData} />
+      : <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} />
 
   )
   return (

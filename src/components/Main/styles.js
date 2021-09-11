@@ -45,7 +45,7 @@ export const VideoBg = styled.video`
 export const MainContent = styled.div`
   margin-top: 100px;
   z-index:3;
-  max-width: 800px;
+  max-width: 940px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -73,11 +73,14 @@ export const MainBtnWrapper = styled.div`
   align-items: center;
 `
 export const MainButton = styled.button`
+  cursor: pointer;
+  margin:20px;
   border-radius: 0;
+  font-weight: 700;
   border: none;
   width: 220px;
-  height: 50px;
-  font-size: 18px;
+  height: 54px;
+  font-size: 24px;
   color: black;
   box-shadow: 10px 10px 0px -1px #000000;
   transition: 0.3s ease-out;

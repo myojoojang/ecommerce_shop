@@ -11,7 +11,7 @@ const Cart = ({ cart, actionEmptyCart, actionDeleteItemIncart, actionUpdateCartQ
   const items = cart.line_items.length
   useEffect(() => {
 
-    document.title = items > 0 ? `Hey, u have ${items} things in ur cart! ` : `U need to add someting!`
+    document.title = items > 0 ? `Hey, u have ${items} thing${items > 1 ? 's' : ''} in ur cart! ` : `U need to add someting!`
   }, [items]);
 
   const EmptyList = () => (

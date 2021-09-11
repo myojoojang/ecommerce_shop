@@ -13,11 +13,11 @@ const Navbar = ({ totalItems }) => {
         <Toolbar>
           <div>
             <Typography component={Link} to="/" className={classes.title}>
-              LOGO HERE
+              NEONESS
             </Typography>
           </div>
-          <div className={classes.grow} />
-          <div>
+          {/* <div className={classes.grow} /> */}
+          <div className={classes.flex}>
             <Typography component={Link} to="/custom" className={classes.link}>
               Custom
             </Typography>
@@ -33,6 +33,16 @@ const Navbar = ({ totalItems }) => {
               </Badge>
             </IconButton>
           </div>
+        </Toolbar>
+        <Toolbar className={classes.navOnMobile}>
+
+          <Typography component={Link} to="/custom" className={classes.link}>
+            Custom
+          </Typography> /
+          <Typography component={Link} to="/products" className={classes.link}>
+            Products
+          </Typography>
+
         </Toolbar>
       </AppBar>
     </>

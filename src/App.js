@@ -8,9 +8,9 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 const theme = createMuiTheme({
   typography: {
     fontFamily: [
-      'Roboto',
-      'Arial',
-      'sans-serif',
+
+      'Azeret Mono',
+      'monospace',
 
     ].join(','),
   },

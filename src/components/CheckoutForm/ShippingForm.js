@@ -119,7 +119,7 @@ const ShippingForm = ({ checkoutToken, next }) => {
           <br />
 
           <div style={{ textAlign: 'right' }}>
-            <Button component={Link} to='/cart'>Cancel Checkout</Button>
+            <Button component={Link} to='/cart'>Cancel</Button>
             <Button type='submit' color='black' style={{ background: '#00ff00', borderRadius: 0, marginLeft: '10px' }}>Next</Button>
           </div>
         </form>

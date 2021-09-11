@@ -16,7 +16,7 @@ export default makeStyles(() => ({
     justifyContent: 'space-between',
     '&:hover': {
       transform: "scale(1.02)",
-      // boxShadow: "10px 10px 0px -1px #ff40ff",
+      boxShadow: "10px 10px 0px -1px #ff40ff",
     },
   },
   name: {

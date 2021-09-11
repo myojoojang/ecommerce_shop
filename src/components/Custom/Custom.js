@@ -1,18 +1,25 @@
 import React, { useEffect } from 'react';
-import Title from '../Title/Title'
-import { Container } from '@material-ui/core';
+
+import { MainBg, MainContainer, VideoBg, MainContent, MainH1 } from '../Main/styles'
+import Video from '../../videos/wip.mp4';
+
 
 const Custom = () => {
   useEffect(() => {
     document.title = "Make custom neon signs 😍"
   }, []);
   return (
-    <>
-      <Container style={{ paddingTop: '30px' }}>
-        <Title title={'Custom'} />
-        <h1 style={{ marginTop: '200px', textAlign: 'center' }}>WIP!</h1>
-      </Container>
-    </>
+    <MainContainer>
+      <MainBg>
+        <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+      </MainBg>
+      <MainContent>
+        <MainH1>
+          🔨 WIP! 🔧
+        </MainH1>
+      </MainContent>
+    </MainContainer>
+
   );
 }
 

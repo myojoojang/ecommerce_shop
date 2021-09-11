@@ -17,20 +17,39 @@ export default makeStyles((theme) => ({
   title: {
     textDecoration: 'none',
     fontWeight: 700,
+    fontSize: '28px',
     color: 'black',
+    marginRight: '10px',
   },
   link: {
     cursor: 'pointer',
     textDecoration: 'none',
     color: 'black',
-    marginLeft: '20px',
+    marginLeft: '10px',
     transition: "0.3s ease-out",
     '&:hover': {
       color: "#00ff00",
     },
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex'
+    }
+  },
+  flex: {
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex'
+    }
   },
 
+  navOnMobile: {
+    borderTop: '3px solid black',
 
+    display: 'flex',
+    [theme.breakpoints.up('sm')]: {
+      display: 'none'
+    }
+
+  },
   menuButton: {
     marginRight: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
@@ -38,7 +57,7 @@ export default makeStyles((theme) => ({
     }
   },
   grow: {
-    width: '100%'
+    width: '90%'
   },
   button: {
     backgroundColor: "black",

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { MainBg, MainContainer, VideoBg, MainContent, MainBtnWrapper, MainH1, MainButton } from './styles'
-
+import { Link } from 'react-router-dom';
 import Video from '../../videos/main.mp4';
 
 const Main = () => {
   useEffect(() => {
-    document.title = "NEONs ✨"
+    document.title = "NEONESS ✨"
   }, []);
   return (
     <MainContainer>
@@ -14,13 +14,15 @@ const Main = () => {
       </MainBg>
       <MainContent>
         <MainH1>
-          text whatever you think it would be fit
+          HIGH QUALITY CUSTOM & OFF THE SHELF NEON SIGNS
         </MainH1>
 
         <MainBtnWrapper>
-          <MainButton >
-            Create an Account
-          </MainButton>
+          <Link to='/products' >
+            <MainButton  >
+              SHOP NOW!
+            </MainButton>
+          </Link>
         </MainBtnWrapper>
       </MainContent>
     </MainContainer>
