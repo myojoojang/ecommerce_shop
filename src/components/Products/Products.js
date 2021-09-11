@@ -14,7 +14,7 @@ const Products = ({ products, onAddToCart }) => {
   const classes = useStyles()
   return (
     <>
-      <Container style={{ paddingTop: '30px' }}>
+      <Container style={{ padding: '50px 0' }}>
 
         <div className={classes.toolbar} />
         <Title title={'Products'} />

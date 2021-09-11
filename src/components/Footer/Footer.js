@@ -1,11 +1,11 @@
 import React from 'react';
-import { Footer } from './styles'
+import { MainFooter } from './styles';
 const Footer = () => {
   return (
-    <>
-      <Footer>
-      </Footer>
-    </>
+    <MainFooter>
+      This app is built using React, React Hook, commerce.js, stripe.js material-ui and styled-components.js
+    </MainFooter>
+
   );
 }
 

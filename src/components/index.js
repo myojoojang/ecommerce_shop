@@ -6,3 +6,5 @@ export { default as Checkout } from './CheckoutForm/Checkout/Checkout'
 
 export { default as Main } from './Main/Main'
 export { default as Custom } from './Custom/Custom'
+
+export { default as Footer } from './Footer/Footer'
