@@ -18,7 +18,7 @@ const PaymentReview = ({ checkoutToken }) => {
         <Divider style={{ marginTop: '20px', marginBottom: '20px' }} />
 
         <ListItem style={{ padding: '10px 0' }}>
-          <ListItemText primary="Total" />
+          <ListItemText primary="Total" style={{ fontWeight: 700 }} />
           <Typography varient='subtitle1'>
             {checkoutToken.live.subtotal.formatted_with_code}
           </Typography>
