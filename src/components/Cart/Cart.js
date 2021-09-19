@@ -54,7 +54,7 @@ const Cart = ({ cart, actionEmptyCart, actionDeleteItemIncart, actionUpdateCartQ
   if (!cart.line_items) return 'Loading'
 
   return (
-    <Container style={{ padding: '50px 0', minHeight: '100vh' }}>
+    <Container style={{ padding: '50px 0', minHeight: '100vh', marginBottom: '80px' }}>
       <div className={classes.toolbar} />
       <Title title={'Shopping Cart'}></Title>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CssBaseline, Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider, Button } from '@material-ui/core';
+import { Container, Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider, Button } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom';
 import Title from '../../Title/Title';
 
@@ -45,7 +45,7 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
   let Confirmation = () => (order.customer ? (
     <>
       <div>
-        <Typography variant="h5">Thank you for your purchase, {order.customer.firstname} {order.customer.lastname}!</Typography>
+        <Typography variant="h5">Thank you for the purchase, {order.customer.firstname} {order.customer.lastname}!</Typography>
         <Divider className={classes.divider} />
         <Typography variant="subtitle2">Order ref: {order.customer_reference}</Typography>
       </div>
@@ -74,22 +74,23 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
 
   return (
     <>
-      <CssBaseline />
-      <div className={classes.toolbar} />
-      <main className={classes.layout}>
-        <Paper className={classes.paper}>
-          <Title title={'Checkout'} />
+      <Container style={{ padding: '20px 0', marginBottom: '40px' }}>
+        <div className={classes.toolbar} />
+        <main className={classes.layout}>
+          <Paper className={classes.paper}>
+            <Title title={'Checkout'} />
 
-          <Stepper activeStep={activeStep} className={classes.stepper}>
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-          {activeStep === steps.length ? <Confirmation /> : checkoutToken && <Form />}
-        </Paper>
-      </main>
+            <Stepper activeStep={activeStep} className={classes.stepper}>
+              {steps.map((label) => (
+                <Step key={label}>
+                  <StepLabel>{label}</StepLabel>
+                </Step>
+              ))}
+            </Stepper>
+            {activeStep === steps.length ? <Confirmation /> : checkoutToken && <Form />}
+          </Paper>
+        </main>
+      </Container>
     </>
   );
 };

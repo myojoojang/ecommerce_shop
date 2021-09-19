@@ -6,7 +6,7 @@ export default makeStyles(() => ({
     maxWidth: '100%',
     height: '100%',
     padding: '5px',
-    marginTop: '10px',
+    margin: '20px 0',
     boxShadow: "10px 10px 0px -1px #000000",
     border: "black solid 3px",
     borderRadius: "0",
