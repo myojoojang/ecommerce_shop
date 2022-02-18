@@ -2,25 +2,25 @@
 export const homeObjOne = {
   id: 'about',
   lightBg: false,
-  topLine: 'lorem',
-  headLine: 'whatever',
-  description: 'lorem  esdfs',
-  buttonLabel: 'get start',
+  topLine: 'tag',
+  headLine: 'main section 1',
+  description: 'main description',
+  buttonLabel: 'btn 1',
   imgStart: true,
   img: require('../../../images/party.svg').default,
-  alt: 'Car',
+  alt: 'tag',
 
 }
 
 export const homeObjTwo = {
   id: 'sec2',
   lightBg: true,
-  topLine: 'lorem',
-  headLine: 'whatever',
-  description: 'dkawpoefjoi jdjgkjgnsdpfksopdkf pokfopskdopfksopdkfopkdsop',
-  buttonLabel: 'get start',
+  topLine: 'tag',
+  headLine: 'main section 2',
+  description: 'maim description2',
+  buttonLabel: 'btn 2',
   imgStart: false,
   img: require('../../../images/custom.svg').default,
-  alt: 'Car',
+  alt: 'tag',
 
 }
